@@ -142,7 +142,7 @@ def play(board)
   until over?(board)
     turn(board)
   end
-  binding.pry
+  
   if won?(board)
     puts "Congratulations " + winner(board) + "!"
   elsif draw?(board)
