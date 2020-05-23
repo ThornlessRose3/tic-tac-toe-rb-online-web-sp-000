@@ -50,7 +50,7 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
-    move(board,index)
+    move(board,index, current_player(board))
   else
     turn(board)
   end
@@ -141,20 +141,12 @@ end
 
 # Define play (to be modified)
 def play(board)
-  until counter == 9
-    counter = turn_count(board)
-    if over?(board)
-      break
-    else
-      turn(board)
-    end
+  until over?(board)
+    turn(board)
   end
   if won?(board)
-    winner = winner(board)
-    puts "Congratulations " + winner + "!"
+    return "Congratulations " + winner(board) + "!"
   elsif draw?(board)
     return "Cat's Game!"
-  else
-    turn(board)
   end
 end
