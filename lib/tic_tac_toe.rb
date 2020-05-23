@@ -136,10 +136,13 @@ end
 def play(board)
   until counter == 9
     counter = turn_count(board)
-    if over?)(board)
+    if over?(board)
       break
+    elsif won?(board)
+      winner = winner(board)
+      puts ""
     else
-    turn(board)
-  end
+      turn(board)
+    end
   end
 end
