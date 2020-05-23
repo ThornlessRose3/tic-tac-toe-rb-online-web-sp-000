@@ -63,7 +63,7 @@ def turn_count(board)
   i = 0 
   while i < 9 
     if position_taken?(board, i)
-      turns += 1-9
+      turns += 1
     end
     i += 1
   end
