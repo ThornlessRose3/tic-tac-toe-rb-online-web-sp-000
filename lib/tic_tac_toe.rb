@@ -133,7 +133,16 @@ end
 # Define winner
 def winner(board)
   if won?(board) 
-    return current_player(board)
+    WIN_COMBINATIONS.each do |win_combination|
+    win_index1 = win_combination[0]
+    win_index2 = win_combination[1]
+    win_index3 = win_combination[2]
+    position_1 = board[win_index1]
+    position_2 = board[win_index2]
+    position_3 = board[win_index3]
+    if position_1 == position_2 && position_2 == position_3 && position_taken?(board, win_index1)
+      return position_1
+    end
   end
 end
 
