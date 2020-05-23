@@ -133,7 +133,7 @@ end
 # Define winner
 def winner(board)
   if won?(board) 
-    return board
+    return current_player(board)
   end
 end
 
