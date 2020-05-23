@@ -136,6 +136,10 @@ end
 def play(board)
   until counter == 9
     counter = turn_count(board)
+    if over?)(board)
+      break
+    else
     turn(board)
+  end
   end
 end
