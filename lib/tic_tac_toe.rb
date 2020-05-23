@@ -138,11 +138,16 @@ def play(board)
     counter = turn_count(board)
     if over?(board)
       break
-    elsif won?(board)
+    else
+      turn(board)
+    end
+  end
+    if won?(board)
       winner = winner(board)
       puts "Congratulations #{winner}"
     elsif draw?(board)
-    return "Cat's game!"
+      return "Cats Game!"
+    else
       turn(board)
     end
   end
