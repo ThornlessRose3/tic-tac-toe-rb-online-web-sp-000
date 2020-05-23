@@ -25,7 +25,7 @@ return user_input.to_i - 1
 end
 
 # Define move
-def move(array, index, value = "X")
+def move(array, index, value)
 array[index] = value
 return array
 end
