@@ -144,6 +144,7 @@ def play(board)
   until over?(board)
     turn(board)
   end
+  
   if won?(board)
     return "Congratulations " + winner(board) + "!"
   elsif draw?(board)
