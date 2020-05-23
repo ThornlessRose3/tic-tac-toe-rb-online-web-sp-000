@@ -144,8 +144,8 @@ def play(board)
   end
   binding.pry
   if won?(board)
-    return "Congratulations " + winner(board) + "!"
+    puts "Congratulations " + winner(board) + "!"
   elsif draw?(board)
-    return "Cat's Game!"
+    puts "Cat's Game!"
   end
 end
