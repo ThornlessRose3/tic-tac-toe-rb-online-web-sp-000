@@ -71,7 +71,13 @@ def turn_count(board)
 end
 
 # Define current_player
-
+def current_player(board)
+  if turn_count(board).odd?
+    return "O"
+  else 
+    return "X"
+  end
+end
 
 # Define won?
 def won?(board)
