@@ -58,7 +58,17 @@ def turn(board)
 end
 
 # Define turn_count
-
+def turn_count(board)
+  turns = 0 
+  i = 0 
+  while i < 9 
+    if position_taken?(board, i)
+      turns += 1-9
+    end
+    i += 1
+  end
+  return turns
+end
 
 # Define current_player
 
